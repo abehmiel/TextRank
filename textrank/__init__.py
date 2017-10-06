@@ -12,6 +12,9 @@ import itertools
 import networkx as nx
 import nltk
 import os
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 
 def setup_environment():
@@ -161,7 +164,7 @@ def extract_key_phrases(text):
     return modified_key_phrases
 
 
-def extract_sentences(text, summary_length=100, clean_sentences=False, language='english'):
+def extract_sentences(text, summary_length=150, clean_sentences=False, language='english'):
     """Return a paragraph formatted summary of the source text.
 
     :param text: A string.
